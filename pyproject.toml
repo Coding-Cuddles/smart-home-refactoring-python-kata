@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "bootstrap-python-kata"
+name = "smart-home-refactoring-python-kata"
 version = "1.0.0"
-description = "Bootstrap for Python katas"
+description = "Smart home refactoring kata in Python"
 authors = ["Codding Cuddles"]
 
 [tool.poetry.dependencies]
