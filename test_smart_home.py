@@ -11,8 +11,10 @@ def controller():
 def test_turn_on_all(controller):
     assert controller.turn_on_all() == [
         "Switchable light turned on",
+        "Switchable light turned on",
         "Networkable light turned on",
         "Dimmable light turned on at full brightness",
+        "Coffee maker turned on",
         "AC turned on",
     ]
 
@@ -20,8 +22,10 @@ def test_turn_on_all(controller):
 def test_turn_off_all(controller):
     assert controller.turn_off_all() == [
         "Switchable light turned off",
+        "Switchable light turned off",
         "Networkable light turned off",
         "Dimmable light turned off",
+        "Coffee maker turned off",
         "AC turned off",
     ]
 

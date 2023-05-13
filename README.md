@@ -13,30 +13,30 @@ controls different types of lights and an air conditioner.
 
 ## Instructions
 
-The initial code consists of the following classes:
+### Exercise 1
 
-* `SwitchableLight`
-* `DimmableLight`
-* `NetworkableLight`
-* `AirConditioner`
-* `SmartHomeController`
+The initial code consists of several device classes and the
+`SmartHomeController` class, which is responsible for controlling all the
+devices (lights and air conditioner).
 
-The `SmartHomeController` class is responsible for controlling all the devices
-(lights and air conditioner). However, the initial code violates the Dependency
-Inversion Principle, as the `SmartHomeController` class directly depends on
-concrete classes. In the tests, we also directly manipulate the
-`dimmable_light` and `networkable_light` instances to check their unique
-behaviors.
+However, the initial code violates the Dependency Inversion Principle, as the
+`SmartHomeController` class directly depends on concrete classes. In the tests,
+we also directly manipulate the `dimmable_light` and `networkable_light`
+instances to check their unique behaviors.
 
 Your goal is to refactor the code to adhere to the Dependency Inversion
-Principle. Here are some guidelines to follow:
+Principle and make it easier to implement new devices.
 
-1. Introduce an interface (or an abstract base class) for the devices that the
-   `SmartHomeController` interacts with.
+Here are some guidelines to follow:
+
+1. Introduce an interface or several interfaces (or abstract base classes) for
+   the devices that the `SmartHomeController` interacts with.
+
 1. Update the `SmartHomeController` class to depend on this interface, instead
    of the concrete device classes.
-1. Update the devices (`SwitchableLight`, `DimmableLight`, `NetworkableLight`,
-   and `AirConditioner`) to implement this interface.
+
+1. Update the devices to implement these interfaces.
+
 1. Modify any constructors or method calls as necessary to accommodate the
    refactoring.
 
@@ -45,6 +45,23 @@ Principle. Here are some guidelines to follow:
 > Remember that in this exercise, we assume all devices are in an ideal state
 > and don't account for error cases such as a network connection failure or an
 > attempt to dim a light below 0% or above 100% brightness.
+
+Make sure the program still behaves the same way after your refactoring.
+There's a unit test in place that checks that on a very rudimentary level by
+just looking at the output of the program.
+
+### Exercise 2
+
+When you're done with refactoring, test the quality of your refactoring by
+implementing two additional scenarios (methods) in `SmartHomeController`:
+
+1. Add the `make_quick_breakfast` scenario to raise the blinds and make a
+   predefined coffee type.
+
+1. Add automatic vacuum cleaner and the `start_night_cleaning` scenario, which
+   should start the cleaning once everything else is turned off.
+
+Evaluate whether or not your refactoring made life easier for you, or not.
 
 ## Usage
 
