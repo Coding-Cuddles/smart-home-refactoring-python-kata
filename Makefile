@@ -1,6 +1,6 @@
-all: format-check test
+all: test
 
-SRCS := $(shell find . -name '*.py')
+SRCS := $(shell git ls-files *.py)
 
 .PHONY: run
 run:
@@ -12,11 +12,11 @@ test:
 
 .PHONY: format
 format:
-	@yapf -i $(SRCS)
+	yapf -i $(SRCS)
 
 .PHONY: format-check
 format-check:
-	@yapf --diff $(SRCS) \
+	yapf --diff $(SRCS) \
 		|| (echo "Some files require formatting. Run 'make format' to fix." && exit 1)
 
 ifndef VERBOSE
