@@ -39,11 +39,11 @@ class AirConditioner:
     def turn_off(self):
         return "AC turned off"
 
-    def set_temperature(self, temperature_in_celcius):
-        return f"Set temperature to {temperature_in_celcius}"
+    def set_temperature(self, temperature_in_celsius):
+        return f"Set temperature to {temperature_in_celsius}"
 
 
-class CoffeMaker:
+class CoffeeMaker:
 
     def turn_on(self):
         return "Coffee maker turned on"
@@ -62,7 +62,7 @@ class SmartHomeController:
         self.switchable_light_2 = SwitchableLight()
         self.networkable_light = NetworkableLight()
         self.dimmable_light = DimmableLight()
-        self.coffee_maker = CoffeMaker()
+        self.coffee_maker = CoffeeMaker()
         self.ac = AirConditioner()
 
     def turn_on_all(self):
