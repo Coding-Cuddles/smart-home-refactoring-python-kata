@@ -35,5 +35,7 @@ def test_dim_light(controller):
 
 
 def test_connect_light_to_network(controller):
-    assert controller.networkable_light.connect_to_network(
-        "Home Network") == "Networkable light connected to Home Network"
+    assert (
+        controller.networkable_light.connect_to_network("Home Network")
+        == "Networkable light connected to Home Network"
+    )

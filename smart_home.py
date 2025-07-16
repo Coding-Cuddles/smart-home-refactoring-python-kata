@@ -1,5 +1,4 @@
 class SwitchableLight:
-
     def turn_on(self):
         return "Switchable light turned on"
 
@@ -8,7 +7,6 @@ class SwitchableLight:
 
 
 class DimmableLight:
-
     def turn_on(self):
         return "Dimmable light turned on at full brightness"
 
@@ -20,7 +18,6 @@ class DimmableLight:
 
 
 class NetworkableLight:
-
     def turn_on(self):
         return "Networkable light turned on"
 
@@ -32,7 +29,6 @@ class NetworkableLight:
 
 
 class AirConditioner:
-
     def turn_on(self):
         return "AC turned on"
 
@@ -44,7 +40,6 @@ class AirConditioner:
 
 
 class CoffeeMaker:
-
     def turn_on(self):
         return "Coffee maker turned on"
 
@@ -56,7 +51,6 @@ class CoffeeMaker:
 
 
 class SmartHomeController:
-
     def __init__(self):
         self.switchable_light_1 = SwitchableLight()
         self.switchable_light_2 = SwitchableLight()
@@ -72,7 +66,7 @@ class SmartHomeController:
             self.networkable_light.turn_on(),
             self.dimmable_light.turn_on(),
             self.coffee_maker.turn_on(),
-            self.ac.turn_on()
+            self.ac.turn_on(),
         ]
 
     def turn_off_all(self):
@@ -82,5 +76,5 @@ class SmartHomeController:
             self.networkable_light.turn_off(),
             self.dimmable_light.turn_off(),
             self.coffee_maker.turn_off(),
-            self.ac.turn_off()
+            self.ac.turn_off(),
         ]
