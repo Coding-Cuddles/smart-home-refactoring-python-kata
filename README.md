@@ -1,4 +1,4 @@
-# Smart Home Refactoring Python Kata
+# Smart home refactoring kata in Python
 
 [![CI](https://github.com/Coding-Cuddles/smart-home-refactoring-python-kata/actions/workflows/main.yml/badge.svg)](https://github.com/Coding-Cuddles/smart-home-refactoring-python-kata/actions/workflows/main.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
